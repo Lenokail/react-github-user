@@ -1,0 +1,28 @@
+@import '../../styles/_vars';
+
+.search {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	font-size: 18px;
+
+	padding: 20px;
+	margin-bottom: 30px;
+
+	border-radius: 16px;
+
+	background-color: $block-color;
+
+	@media (max-width: $breakpoint-2) {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	div {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+
+	}
+}

@@ -1,0 +1,133 @@
+@import '../../styles/_vars';
+
+.main {
+	display: flex;
+	background-color: $block-color;
+
+	border-radius: 16px;
+	padding: 20px;
+
+	@media (max-width: $breakpoint-2) {
+		display: block;
+	}
+
+	.avatar {
+		padding: 0 10px;
+
+		@media (max-width: $breakpoint-2) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		img {
+			width: 120px;
+			height: 120px;
+
+			border-radius: 50%;
+
+			@media (max-width: $breakpoint-2) {
+				width: 160px;
+				height: 160px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+
+		padding: 0 10px;
+
+		gap: 20px;
+
+		@media (max-width: $breakpoint-2) {
+			align-items: center;
+		}
+
+		.user {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@media (max-width: $breakpoint-2) {
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.name {
+				font-size: 22px;
+				font-weight: 500;
+			}
+
+			.date {
+				color: $secondary;
+				font-size: 14px;
+			}
+		}
+
+		.nickname {
+			font-size: 14px;
+			color: $button;
+		}
+
+		.block {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			width: 100%;
+			background-color: $backgroud;
+
+			padding: 24px 20px;
+
+			border-radius: 16px;
+
+			@media (max-width: $breakpoint-2) {
+				width: 100%;
+			}
+
+			.section {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+
+				.type {
+					color: $secondary;
+					font-size: 14px;
+				}
+
+				.count {
+					font-size: 20px;
+					font-weight: 500;
+				}
+			}
+		}
+
+		.more_info {
+
+			display: grid;
+			grid-template-columns: auto auto;
+			row-gap: 18px;
+			column-gap: 20px;
+
+			font-size: 14px;
+			color: $secondary;
+
+			div {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				word-break: break-all;
+			}
+
+			.icon {
+				font-size: 20px;
+				color: $primary;
+			}
+		}
+	}
+}

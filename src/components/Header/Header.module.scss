@@ -1,0 +1,66 @@
+@import '../../styles/_vars';
+
+@mixin delay($number, $value) {
+	@for $i from 1 to ($number + 1) {
+	  &:nth-child(#{$i}) {
+		animation-delay: (#{$i*$value});
+	  }
+	}
+  }
+
+.header {
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 18px;
+
+	background-color: $block-color;
+
+	padding: 20px;
+	margin-bottom: 30px;
+
+	border-radius: 16px;
+
+	@media (max-width: $breakpoint-2) {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.logo {
+		user-select: none;
+
+		.item {
+			position: relative;
+			animation: bounce 3s infinite ease;
+			@include delay(21, 0.1s);
+		}
+	}
+
+	.author {
+		cursor: pointer;
+		user-select: none;
+
+		background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+		background-clip: text;
+		color: transparent;
+		animation: rainbow_animation 6s infinite ease-in-out ;
+		background-size: 400% 100%;
+	}
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes bounce {
+	100% {
+		top: -1px;
+	}
+}

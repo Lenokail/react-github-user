@@ -1,0 +1,22 @@
+@import '../../styles/_vars';
+
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+
+	color: $primary;
+	background-color: $backgroud;
+	
+	.wrapper {
+		min-width: 600px;
+
+		margin: 0 14px;
+
+		@media (max-width: $breakpoint-1) {
+			min-width: 100px;
+		}
+	}
+}

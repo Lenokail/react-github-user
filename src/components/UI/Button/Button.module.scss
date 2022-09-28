@@ -1,0 +1,23 @@
+@import '../../../styles/_vars';
+
+.button {
+	outline: none;
+	background: none;
+	border: none;
+
+	color: $primary;
+	font-size: 18px;
+
+	padding: 10px 16px;
+
+	background-color: $button;
+
+	border-radius: 12px;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: darken($button, 5);
+	}
+
+}
